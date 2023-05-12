@@ -9,6 +9,6 @@ app.get("/", function (req, res) {
 app.use("/auth", authRouter);
 
 app.listen(process.env.PORT || 3000, async () => {
-    await mongoose.connect(process.env.DATABASE_LINK, { useNewUrlParser: true });
+    await mongoose.connect("mongodb+srv://abdallahshaltout:admin@cloudcomputing.9tf94rc.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
     mongoose.set("strictQuery", true);
 });
